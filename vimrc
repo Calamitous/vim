@@ -23,13 +23,18 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colorscheme twilight
+
+" Color scheme
+set background=dark
+colorscheme ir_black_mod " This is a much better color scheme, Scotty :)
+"colorscheme twilight
 
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 4 spaces
 set bs=2  " Backspace over everything in insert mode
 set shiftwidth=2  " Tabs under smart indent
 set nocp incsearch
+set nocp hlsearch
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
@@ -38,6 +43,7 @@ set autoindent
 set smarttab
 set lines=50
 set columns=120
+set backspace=2     
 
 " Visual
 set showmatch  " Show matching brackets.
@@ -52,7 +58,7 @@ set mouse=a  " Mouse in all modes
 
 "set showtabline=2
 set tabpagemax=15
-set guifont=DejaVu_Sans_Mono:h12
+" set guifont=DejaVu\ Sans\ Mono\ 10
 set cursorline
 
 runtime! macros/matchit.vim
