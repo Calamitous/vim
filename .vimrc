@@ -77,3 +77,17 @@ noremap <C-k> :bnext<CR>
 let g:buftabs_only_basename=1
 set laststatus=2
 let g:buftabs_in_statusline=1
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+set hidden
+nnoremap ' `
+nnoremap ` '
+set wildmode=list:longest
+
+set title
+set scrolloff=3
+
+let g:fuzzy_ignore = "*.log"
+let g:fuzzy_matching_limit = 10
+

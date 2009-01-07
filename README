@@ -1,1 +1,1 @@
-This is my custom vim setup. Move vimrc to ~/.vimrc. The rest of the files should be in ~/.vim
+This is my custom vim setup. Move or symlink vimrc to ~/.vimrc. The rest of the files should be in ~/.vim

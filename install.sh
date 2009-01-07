@@ -1,8 +1,11 @@
 #!/usr/bin/bash
 
-cp -r ~/.vim ~/.vim_bu
-cp ~/.vimrc ~/.vimrc_bu
-cp -r * ~/.vim
-cp ~/.vim/vimrc ~/.vimrc
+# Back up existing vim config
+mv ~/.vim ~/.vim_bu
+mv ~/.vimrc ~/.vimrc_bu
+
+# Copy over new config
+mv * ~/.vim
+mv ~/.vim/.vimrc ~/.vimrc
 
 
