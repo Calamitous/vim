@@ -11,19 +11,21 @@
 " Changes:
 "
 
-iab <silent> des describe !@Class@!, '!@method@!' do<CR>!@its@!<CR>end<Esc>2k0;<C-R>=Eatchar('\s')<CR>
+iab <silent> des describe '!@method@!' do<CR>!@its@!<CR>end<Esc>2k0;<C-R>=Eatchar('\s')<CR>
 iab <silent> it it "should !@should@!" do<CR>!@something@!<CR>end<CR><Esc>3k0;<C-R>=Eatchar('\s')<CR>
-iab <silent> desit describe !@Class@!, '!@method@!' do<CR>it "should !@should@!" do<CR>!@stuff@!<CR>end<CR>end<CR><Esc>5kO<Esc>;<C-R>=Eatchar('\s')<CR>
+iab <silent> desit describe '!@method@!' do<CR>it "should !@should@!" do<CR>!@stuff@!<CR>end<CR>end<CR><Esc>5kO<Esc>;<C-R>=Eatchar('\s')<CR>
 
 noremap <buffer><silent> <F10> :w<CR>:echo "Running test file..."<CR>:!script/spec %<CR>
 
-" Sigh... everybody has their own keystroke for running specs...
-
-" for VS aficionados...
-" noremap <buffer><silent> <F5> :w<CR>:echo "Running tests..."<CR>:let spec_response = system("script/spec -l ".line(".")." ".expand("%"))<CR>:echo spec_response<CR>
-
-" for Mac/Textmate geeks...
-noremap <buffer><silent> <M-r> :w<CR>:echo "Running tests..."<CR>:let spec_response = system("script/spec -l ".line(".")." ".expand("%"))<CR>:echo spec_response<CR>
-
 " randomly chosen to be near F10...
 noremap <buffer><silent> <F11> :w<CR>:echo "Running tests..."<CR>:let spec_response = system("script/spec -l ".line(".")." ".expand("%"))<CR>:echo spec_response<CR>
+
+" Sigh... everybody has their own keystroke for running specs...
+
+" for Mac/Textmate geeks...
+noremap <buffer><silent> <D-R> :w<CR>:echo "Running tests..."<CR>:let spec_response = system("script/spec -l ".line(".")." ".expand("%"))<CR>:echo spec_response<CR>
+noremap <buffer><silent> <D-r> :w<CR>:echo "Running test file..."<CR>:!script/spec %<CR>
+
+" for VS aficionados...?
+" noremap <buffer><silent> <F5> :w<CR>:echo "Running tests..."<CR>:let spec_response = system("script/spec -l ".line(".")." ".expand("%"))<CR>:echo spec_response<CR>
+
