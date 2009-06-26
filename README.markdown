@@ -44,6 +44,7 @@ This bundle currently includes the following snippets:
 * 'des' expands to a describe block
 * 'it' expands to an it block
 * 'desit' expands to a describe block with a nested it block
+* 'bef' expands to a before(:each) block
 
 All snippet and feature suggestions are welcome.
 
