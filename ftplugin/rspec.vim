@@ -14,6 +14,7 @@
 iab <silent> des describe '!@method@!' do<CR>!@its@!<CR>end<Esc>2k0;<C-R>=Eatchar('\s')<CR>
 iab <silent> it it "should !@should@!" do<CR>!@something@!<CR>end<CR><Esc>3k0;<C-R>=Eatchar('\s')<CR>
 iab <silent> desit describe '!@method@!' do<CR>it "should !@should@!" do<CR>!@stuff@!<CR>end<CR>end<CR><Esc>5kO<Esc>;<C-R>=Eatchar('\s')<CR>
+iab <silent> bef before(:each) do<CR>!@before_block@!<CR>end<CR><Esc>3k0;<C-R>=Eatchar('\s')<CR>
 
 noremap <buffer><silent> <F10> :w<CR>:echo "Running test file..."<CR>:!script/spec %<CR>
 
