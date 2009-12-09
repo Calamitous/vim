@@ -26,8 +26,7 @@ set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 
 " Color scheme
 set background=dark
-colorscheme ir_black_mod " This is a much better color scheme, Scotty :)
-"colorscheme twilight
+colorscheme vividchalk
 
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 4 spaces
@@ -55,6 +54,7 @@ set laststatus=2  " Always show status line.
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+set guioptions-=T
 
 "set showtabline=2
 set tabpagemax=15
