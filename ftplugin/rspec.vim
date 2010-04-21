@@ -27,6 +27,7 @@ function! OpenWindowAndRunSpec(spec_command, filename)
   echo a:spec_command
   execute a:spec_command
   " call search("^\d\d*)$")
+	/^\d\d*)$/e
 endfunction
 
 function! RunSpecFile(...)
@@ -53,6 +54,6 @@ endfunction
 noremap <buffer><silent> <D-F10> :w<CR>:call RunSpecFile({ "command":"spec" })<CR>/^\d\d*)$<CR>
 noremap <buffer><silent> <D-F11> :w<CR>:call RunSpecFile({ "command":"spec", "type":"single test" })<CR>/^\d\d*)$<CR>
 
-noremap <buffer><silent> <D-r> :w<CR>:call RunSpecFile()<CR>
-noremap <buffer><silent> <D-R> :w<CR>:call RunSpecFile({ "type":"single test" })<CR>/^\d\d*)$<CR>
+noremap <buffer><silent> <F10> :w<CR>:call RunSpecFile()<CR>
+noremap <buffer><silent> <F11> :w<CR>:call RunSpecFile({ "type":"single test" })<CR>/^\d\d*)$<CR>
 
